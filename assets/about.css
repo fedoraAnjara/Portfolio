@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90dvh;
+    height: 100dvh;
     width: 100dvw;
     position: relative;
     background: linear-gradient(to right top, #020135, #130233e0, #58364cbe, #130233e0, #020135);
@@ -13,13 +13,7 @@
     text-align: center;
     padding: 50px 0;
     letter-spacing: 5px;
-}
-
-.gradient-text2 {
-    background: linear-gradient(to right top, #000);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    z-index: 2;
 }
 
 #aboutSection i{

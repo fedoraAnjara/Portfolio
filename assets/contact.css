@@ -1,0 +1,101 @@
+#contact {
+    background-color: #020135;
+    height: 100dvh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    width: 90vw;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contact-wrapper h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #e6881d, #cd719d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-wrapper p {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px 20px;
+    border-radius: 16px;
+    border: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #eee;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(200, 200, 200, 0.4);
+    font-style: italic;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #e6881d;
+    background-color: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.contact-form .btn {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0;
+    padding: 10px 25px;
+    background-color: #e6881d;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-form .btn i {
+    font-size: 1.3rem;
+    color: inherit;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-40deg);
+}
+
+.contact-form .btn:hover {
+    background-color: transparent;
+    border: 2px solid #e6881d;
+    color: #e6881d;
+}
+
+.contact-form .btn:hover i {
+    transform: translateX(5px);
+    transform: rotate(-40deg);
+}
