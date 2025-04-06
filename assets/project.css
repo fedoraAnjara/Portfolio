@@ -21,17 +21,52 @@
     
 }
 
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* Cacher les boutons mais les positionner visuellement */
+.slider input[type="radio"] {
+    position: absolute;
+    bottom: 10px;
+    opacity: .5;
+    pointer-events: auto; /* Permet les clics même s'ils sont invisibles */
+}
+
+/* Positionner chaque bouton individuellement */
+.slider input[type="radio"]:nth-of-type(1) {
+    left: 48%;
+}
+.slider input[type="radio"]:nth-of-type(2) {
+    left: 50%;
+}
+.slider input[type="radio"]:nth-of-type(3) {
+    left: 52%;
+}
+.slider input[type="radio"]:nth-of-type(4) {
+    left: 54%;
+}
+.slider input[type="radio"]:nth-of-type(5) {
+    left: 56%;
+}
+
 /* --- Styles pour le slider --- */
 .slides {
+    position: absolute;
+    top: 80px; /* ajuste selon ce que tu veux */
+    left: 750px;
     display: flex;
     flex-direction: row;
-
     transition: transform 0.5s ease;
+    gap: 20px; /* si tu veux un espace entre les slides */
 }
 
 .slide {
-    width: 440px;
-    height: 250px; /* Ajuste selon la taille de ton slider */
+    width: 700px;
+    height: 510px; /* Ajuste selon la taille de ton slider */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,10 +74,13 @@
 
 /* --- Styles pour les miniatures --- */
 .thumbnails {
+    position: absolute;
+    top: 50%;
+    right: 50px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     gap: 10px;
-    margin-top: 10px;
+    z-index: 2;
 }
 
 .thumbnail {
@@ -63,6 +101,7 @@
 /* --- Pour afficher la slide sélectionnée --- */
 input[type="radio"]:checked ~ .slides {
     transform: translateX(-100%);
+    
 }
 
 /* --- Gérer les états actifs des miniatures et des slides --- */
