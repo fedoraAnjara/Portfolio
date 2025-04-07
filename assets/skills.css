@@ -1,176 +1,259 @@
 #skillsSection {
-    position: relative;
-    height: 120dvh;
-    width: 120dvw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-    padding-top: 4%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 2%;
-    background: linear-gradient(to right top, #58364cbe, #020135, #020135, #020135, #020135, #020135, #58364cbe);
+  position: relative;
+  height: 120dvh;
+  width: 120dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 2%;
+  background: linear-gradient(
+    to right top,
+    #58364cbe,
+    #020135,
+    #020135,
+    #020135,
+    #020135,
+    #020135,
+    #58364cbe
+  );
 }
 
 #animation {
+  position: absolute;
+  bottom: 235px;
+  right: 655px;
+  height: 225px;
+  width: 225px;
+  opacity: 0;
+}
+
+.progress-circle {
+  position: relative;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20;
+}
+
+.background {
+  stroke: #e6e6e6; /* Couleur de fond */
+}
+
+.foreground {
+  stroke: #3498db; /* Couleur de la progression */
+  stroke-linecap: round;
+  stroke-dasharray: 880;
+  stroke-dashoffset: 880;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+/*survol */
+#html-skill:hover ~ #animation .foreground {
+  stroke-dashoffset: 110;
+}
+
+.percentage {
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  fill: #b8b6b6;
+}
+
+#html-skill:hover ~ #animation {
+  opacity: 1;
+  visibility: visible;
+  transition: 2.5s ease-in-out;
+}
+
+#skillsSection h1 {
+  color: whitesmoke;
+  font-size: 1.5em;
+}
+
+.skillContainer {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 40dvw;
+  justify-content: space-around;
+}
+
+.skillContainer1 {
+  width: 60dvw;
+}
+
+.skillContainer2 {
+  width: 35dvw;
+}
+
+.skillContainer3 {
+  width: 17dvw;
+}
+
+.ps {
+  margin-bottom: -7px;
+}
+
+.skill {
+  height: 90px;
+  width: 92px;
+  border: 3px solid #e6881dda;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.skill:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 20px #cd719d91;
+}
+
+.skill i {
+  font-size: 2.5rem;
+  color: whitesmoke;
+}
+
+.skill p {
+  font-weight: 500;
+  color: rgb(211, 210, 210);
+}
+
+.water-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-effect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    to top,
+    rgba(52, 152, 219, 0.8),
+    rgba(52, 152, 219, 0.3)
+  );
+}
+
+.water-effect:hover::before {
+  height: 100%;
+  animation: fillWater 1.5s ease-in-out;
+}
+
+.notfull:hover::before {
+  height: 75%;
+  animation: fillWater1 1.5s ease-in-out;
+}
+
+@keyframes fillWater {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  75% {
+    height: 75%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fillWater1 {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 75%;
+  }
+}
+
+@media (max-width: 1300px) {
+  #skillsSection {
+    height: 200vh;
+  }
+  .skill {
+    height: 12vh;
+    width: 14vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+
+  .skillContainer1 {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    gap: 2vh;
+
+    .skill {
+      height: 12vh;
+      width: inherit;
+    }
+  }
+
+  .skillContainer2 {
+    width: 90vw;
+  }
+
+  .skillContainer3 {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    gap: 2vh;
+
+    .skill {
+        width: inherit;
+    }
+  }
+
+  .ps {
+    margin-bottom: -7px;
+  }
+
+  #skillsSection h1 {
+    color: whitesmoke;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  #animation {
+    display: none;
+  }
+
+  #animation {
     position: absolute;
     bottom: 235px;
     right: 655px;
     height: 225px;
     width: 225px;
     opacity: 0;
-}
-
-.progress-circle {
-    position: relative;
-}
-
-circle {
-    fill: none;
-    stroke-width: 20;
-}
-
-.background {
-    stroke: #e6e6e6; /* Couleur de fond */
-}
-
-.foreground {
-    stroke: #3498db; /* Couleur de la progression */
-    stroke-linecap: round;
-    stroke-dasharray: 880;
-    stroke-dashoffset: 880;
-    transition: stroke-dashoffset 1.5s ease-out; 
-}
-
-/*survol */
-#html-skill:hover ~ #animation .foreground {
-    stroke-dashoffset: 110; 
-}
-
-.percentage {
-    font-family: Arial, sans-serif;
-    font-size: 3rem;
-    font-weight: 500;
-    fill: #b8b6b6;
-}
-
-#html-skill:hover ~ #animation {
-    opacity: 1;
-    visibility: visible;
-    transition: 2.5s ease-in-out;
-}
-
-#skillsSection h1 {
-    color: whitesmoke;
-    font-size: 1.5em;
-}
-
-.skillContainer {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    width: 40dvw;
-    justify-content: space-around;
-}
-
-.skillContainer1 {
-    width: 60dvw;
-}
-
-.skillContainer2 {
-    width: 35dvw;
-}
-
-.skillContainer3 {
-    width: 17dvw;
-}
-
-.ps {
-    margin-bottom: -7px;
-}
-
-.skill {
-    height: 90px;
-    width: 92px;
-    border: 3px solid #e6881dda;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-}
-
-.skill:hover {
-    cursor: pointer;
-    box-shadow: 0px 8px 20px #cd719d91;
-}
-
-.skill i {
-    font-size: 2.5rem;
-    color: whitesmoke;
-}
-
-.skill p {
-    font-weight: 500;
-    color: rgb(211, 210, 210);
-}
-
-.water-effect {
-    position: relative;
-    overflow: hidden;
-}
-
-.water-effect::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: linear-gradient(to top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.3));
-}
-
-.water-effect:hover::before {
-    height: 100%;
-    animation: fillWater 1.5s ease-in-out;
-}
-
-.notfull:hover::before {
-    height: 75%;
-    animation: fillWater1 1.5s ease-in-out;
-}
-
-@keyframes fillWater {
-    0% {
-        height: 0;
-    }
-    25% {
-        height: 25%;
-    }
-    50% {
-        height: 50%;
-    }
-    75% {
-        height: 75%;
-    }
-    100% {
-        height: 100%;
-    }
-}
-
-@keyframes fillWater1 {
-    0% {
-        height: 0;
-    }
-    25% {
-        height: 25%;
-    }
-    50% {
-        height: 50%;
-    }
-    100% {
-        height: 75%;
-    }
+  }
 }
