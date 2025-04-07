@@ -420,7 +420,6 @@ body {
     flex-direction: column;
     height: auto;
     padding: 10px 0;
-    border: 1px solid white;
   }
 
   .nav-menu {
@@ -442,19 +441,23 @@ body {
     align-items: center;
   }
 
+  #homeConatainer {
+    width: 99vw;
+  }
+
   #hero .container {
-    width: 100%;
-    padding: 1rem;
+    width: 99vw;
+    padding: 1rem; 
     height: auto;
     position: relative;
-    border: 1px solid white;
   }
 
   .container .info h1,
   .container .info h2,
   .container .info p {
     /* text-align: center; */
-    border: 1px solid white;
+    width: 100v;
+    /* border: 1px solid white; */
   }
 
   .container .info h1 {
@@ -471,7 +474,7 @@ body {
 
   .container .info p {
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 
   .btn {
