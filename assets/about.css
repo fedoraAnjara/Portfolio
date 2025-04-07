@@ -108,7 +108,7 @@
 
 @media (max-width: 1300px) {
   #aboutSection {
-    height: 140dvh;
+    height: 140vh;
   }
   .box-wrap {
     display: flex;
@@ -117,5 +117,17 @@
     align-items: center;
     width: 80%;
     gap: 4vh;
+  }
+}
+
+@media (max-width: 380px) {
+  #aboutSection {
+    height: 200vh;
+  }
+}
+
+@media (min-width: 381px ) and (max-width: 420px) {
+ #aboutSection {
+    height: 170vh;
   }
 }

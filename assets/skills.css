@@ -190,7 +190,7 @@ circle {
 
 @media (max-width: 1300px) {
   #skillsSection {
-    height: 200vh;
+    height: 250vh;
   }
   .skill {
     height: 12vh;
@@ -203,7 +203,7 @@ circle {
   }
 
   .skillContainer1 {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,6 +219,16 @@ circle {
 
   .skillContainer2 {
     width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    gap: 2vh;
+
+    .skill {
+      width: inherit;
+    }
   }
 
   .skillContainer3 {
@@ -231,7 +241,7 @@ circle {
     gap: 2vh;
 
     .skill {
-        width: inherit;
+      width: inherit;
     }
   }
 
